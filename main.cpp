@@ -11,19 +11,6 @@ bool isStartFrom(char c, char *s) {
 		return false;
 }
 
-void writeFile(char *path, vector<char*> *data) {
-	FILE *file;
-	file = fopen(path, "w");
-	if (!file) {
-		printf("Ошибка\n");
-	} else {
-		for(int i=0;i<data->size();i++){
-			//printf(data->at(4));
-			fputs(data->at(i),file);
-		}
-		fclose(file);
-	}
-}
 
 void getBufferFromFile(char *path, char *buffer, int size,
 		vector<char*>*out_data) {
